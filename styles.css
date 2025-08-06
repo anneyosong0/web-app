@@ -1,0 +1,116 @@
+/* Base futuristic background and font */
+body {
+  background: radial-gradient(circle at center, #0d0d0d 0%, #000000 100%);
+  color: #00ffee;
+  font-family: 'Orbitron', 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  text-align: center;
+  padding: 30px;
+  margin: 0;
+  transition: background 0.5s ease;
+}
+
+/* Quiz container styling */
+#quiz-container {
+  background-color: rgba(0, 255, 255, 0.08);
+  border: 2px solid #00ffee;
+  border-radius: 15px;
+  padding: 20px;
+  max-width: 600px;
+  margin: 0 auto;
+  box-shadow: 0 0 15px #00ffee88;
+  animation: fadeIn 1s ease;
+}
+
+/* Fade in animation */
+@keyframes fadeIn {
+  from { opacity: 0; transform: translateY(20px); }
+  to { opacity: 1; transform: translateY(0); }
+}
+
+/* Question image styling */
+#question-image {
+  max-width: 300px;
+  margin: 20px 0;
+  border: 2px solid #00ffee;
+  border-radius: 10px;
+  box-shadow: 0 0 10px #00ffee88;
+}
+
+/* Question text styling */
+#question-title {
+  font-size: 24px;
+  margin-bottom: 20px;
+}
+
+/* Option buttons styling */
+#options button {
+  display: block;
+  width: 80%;
+  margin: 10px auto;
+  padding: 12px;
+  font-size: 16px;
+  border: 2px solid #00ffee;
+  background-color: transparent;
+  color: #00ffee;
+  cursor: pointer;
+  border-radius: 8px;
+  transition: all 0.3s ease;
+}
+
+#options button:hover {
+  background-color: #00ffee;
+  color: #000;
+  transform: scale(1.05);
+  box-shadow: 0 0 10px #00ffeeaa;
+}
+
+/* Next button styling */
+button[onclick="nextQuestion()"] {
+  background-color: #00ffee;
+  color: #000;
+  border: none;
+  padding: 12px 25px;
+  margin-top: 20px;
+  font-size: 16px;
+  font-weight: bold;
+  cursor: pointer;
+  border-radius: 10px;
+  box-shadow: 0 0 10px #00ffeeaa;
+  transition: background 0.3s, transform 0.2s;
+}
+
+button[onclick="nextQuestion()"]:hover {
+  background-color: #00cccc;
+  transform: scale(1.1);
+}
+
+/* Final result box styling */
+#result {
+  font-size: 24px;
+  color: #00ffcc;
+  padding: 30px;
+  border: 2px dashed #00ffee;
+  border-radius: 15px;
+  background-color: rgba(0, 255, 255, 0.05);
+  max-width: 500px;
+  margin: 40px auto;
+  box-shadow: 0 0 12px #00ffee66;
+}
+
+/* Progress bar container */
+#progress-container {
+  width: 100%;
+  background-color: #1a1a1a;
+  border-radius: 20px;
+  margin-top: 20px;
+  overflow: hidden;
+  border: 1px solid #00ffee;
+}
+
+/* Progress bar fill */
+#progress-bar {
+  height: 20px;
+  background-color: #00ffee;
+  width: 0%;
+  transition: width 0.4s ease-in-out;
+}
